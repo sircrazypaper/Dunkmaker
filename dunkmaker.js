@@ -6,13 +6,10 @@ let transfers = ['Between the legs', 'Behind the back', 'Under both', 'J-Rich'];
 let transfer ='';
 let dunk = '';
 
-func createDunk(){
+function createDunk(){
   spin = spins[Math.floor(Math.random()*spins.length)];
   transfer = transfers[Math.floor(Math.random()*transfers.length)];
   finish = finishes[Math.floor(Math.random()*finishes.length)];
   dunk = spin+" "+transfer+" "+finish;
-
-  console.log(dunk);
+  document.getElementById('dunkDisplay').innerHTML = dunk;
 }
-
-createDunk();
