@@ -17,5 +17,8 @@ function createDunk(){
 
 function createDunkList(){
   dunks.push(finishes);
+  //For every spin add every finish
+  //for every transfer add every finish
+  //for every spin add every transfer and every finish
   document.getElementById('dunkListDisplay').innerHTML = dunks;
 };
