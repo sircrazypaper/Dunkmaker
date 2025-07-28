@@ -5,6 +5,7 @@ let spin = '';
 let transfers = ['Between the legs', 'Behind the back', 'Under both', 'J-Rich'];
 let transfer ='';
 let dunk = '';
+let dunks = [];
 
 function createDunk(){
   spin = spins[Math.floor(Math.random()*spins.length)];
@@ -12,4 +13,9 @@ function createDunk(){
   finish = finishes[Math.floor(Math.random()*finishes.length)];
   dunk = spin+" "+transfer+" "+finish;
   document.getElementById('dunkDisplay').innerHTML = dunk;
-}
+};
+
+function createDunkList(){
+  dunks.push(finishes);
+  document.getElementById('dunkListDisplay').innerHTML = dunks;
+};
