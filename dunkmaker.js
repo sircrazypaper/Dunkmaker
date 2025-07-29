@@ -18,13 +18,22 @@ function createDunk(){
 function createDunkList(){
   dunks = [];
 
+//Adds every spin dunk and normal finish
   for (let i of spins){
     for (let j of finishes){
       dunk = i+" "+j;
       dunks.push(dunk);
     };
   };
-  //for every transfer add every finish
+
   //for every spin add every transfer and every finish
+  for (let i of spins){
+    for (let j of transfers){
+      for (let l of finishes){
+        dunk = i+" "+j+" "+l;
+        dunks.push(dunk);
+      };
+    };
+  };
   document.getElementById('dunkListDisplay').innerHTML = dunks.join("<br>");
 };
